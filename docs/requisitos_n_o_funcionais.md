@@ -1,4 +1,4 @@
-## 4.3 Requisitos Não Funcionais (RNF)
+## Requisitos Não Funcionais (RNF)
 Os requisitos não funcionais definem as qualidades sistêmicas, limitações e exigências operacionais que garantem o correto funcionamento do LeadForge:
 
 | Código | Atributo / Categoria | Descrição do Requisito | Restrição Relacionada |
