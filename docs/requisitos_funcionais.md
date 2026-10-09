@@ -1,10 +1,4 @@
-# 2. Requisitos de Software
-**Issue #4 e #5** — detalhamento dos requisitos funcionais e não funcionais do sistema.
-
-## 4.1 Visão Geral dos Requisitos
-Os requisitos apresentados a seguir traduzem as necessidades do negócio (Issue #3) em especificações técnicas e comportamentais do software final, sob a ótica da Engenharia de Software. Eles foram divididos entre o comportamento direto do sistema (Requisitos Funcionais) e os seus critérios de qualidade e restrições operacionais (Requisitos Não Funcionais).
-
-## 4.2 Requisitos Funcionais (RF)
+## Requisitos Funcionais (RF)
 Os requisitos funcionais descrevem todas as ações, fluxos de dados e comportamentos das funcionalidades que o LeadForge deve executar:
 
 | Código | Nome do Requisito | Descrição | Origem (Regra / Objetivo) |
