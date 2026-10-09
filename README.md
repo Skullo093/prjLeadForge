@@ -44,8 +44,8 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 1 | Definição do projeto ([doc](docs/01-definicao-do-projeto.md)) | 1 · Documento |
 | 2 | Tema e delimitação do projeto de software ([doc](docs/02-tema-e-delimitacao.md)) | 1 · Documento |
 | 3 | Requisitos de negócio ([doc](docs/03-requisitos-de-negocio.md)) | 1 · Documento |
-| 4 | Requisitos funcionais | 1 · Documento |
-| 5 | Requisitos não funcionais | 1 · Documento |
+| 4 | Requisitos funcionais ([doc](docs/requisitos_funcionais.md)) | 1 · Documento |
+| 5 | Requisitos não funcionais ([doc](docs/requisitos_n_o_funcionais.md)) | 1 · Documento |
 | 6 | Escolha do modelo de software ([doc](docs/Escolha%20do%20modelo%20de%20Software.md)) | 1 · Documento |
 | 7 | Planejamento do projeto de software | 1 · Documento |
 | 8 | Diagramas de uso | 1 · Documento |
