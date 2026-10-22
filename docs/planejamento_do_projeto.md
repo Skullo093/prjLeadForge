@@ -52,7 +52,7 @@ Agrupamos os requisitos em épicos e priorizamos pelo método MoSCoW (**M**ust, 
 | E6. Assistente de análise | RF-09 | Could | Após os 30% | Consulta em linguagem natural; entra se houver tempo. |
 | E7. Transversais | RNF-03, RNF-06 | Must | Todas as sprints | Interface responsiva e código modular. |
 
-A **prioridade** diz o quanto o item importa para o produto; a coluna **Previsto em** diz quando ele entra, considerando que o sistema desta etapa cobre 30% dos protótipos. Quais telas formam esses 30% será definido na Sprint 3, junto com os protótipos (issue #10).
+A **prioridade** diz o quanto o item importa para o produto; a coluna **Previsto em** diz quando ele entra, considerando que o sistema desta etapa cobre 30% dos protótipos. Os 30% seguem o fluxo mínimo ponta a ponta definido na seção 4; o detalhamento das telas sai com os protótipos (issue #10).
 
 ## 4. Plano de sprints
 
@@ -62,43 +62,21 @@ As datas abaixo são o **fim de cada sprint**, quando acontecem a Sprint Review 
 |---|---|---|---|---|
 | **1** | 09/10 | Definição e requisitos | #1 a #6 | Definição, tema e delimitação, requisitos de negócio, funcionais e não funcionais, e modelo de software. **Concluída.** |
 | **2** | 23/10 | Planejamento e modelagem | #7, #8 e #9 | Este planejamento, o diagrama de casos de uso e o diagrama de classes. |
-| **3** | 06/11 | Protótipos | #10 e #11 | Telas em média fidelidade, definição dos 30% a implementar e escolha do modo de testar a prototipação. |
+| **3** | 06/11 | Protótipos | #10 e #11 | Telas em média fidelidade do fluxo mínimo (perfil, busca e lista de oportunidades) e teste dos protótipos com freelancers. |
 | **4** | 20/11 | Sistema | #12 | Implementação de 30% dos protótipos: base do projeto, perfil, descoberta de empresas e o que couber da avaliação de oportunidades. |
 | **5** | 27/11 | Entrega final | #13, #14 e #15 | Consolidação e entrega dos três artefatos: Documento, Protótipos e Sistema. Sprint de 1 semana. |
 
 A Sprint 5 é curta e serve para revisar e consolidar, por isso nenhuma funcionalidade nova deve começar nela, a não ser que as anteriores terminem com folga.
 
-### Decisões deixadas para a Sprint 3
+### Decisões tomadas na Sprint 2
 
-O que ainda não precisa ser decidido agora fica para a próxima sprint. Abaixo estão as opções que mais fazem sentido para cada ponto, com uma sugestão. A decisão final é da equipe e, depois de tomada, será registrada neste documento.
-
-**1. Provedor da API de IA** (usado em E4: explicação e rascunho de abordagem)
-
-| Opção | Vantagens | Pontos de atenção |
+| Decisão | Escolha | Alternativas consideradas |
 |---|---|---|
-| **OpenAI** (sugerida) | SDK amplo e bem documentado, boa saída estruturada em JSON, já havia chave reservada para esse uso. | Uso pago; é preciso definir um teto de gasto. |
-| Anthropic (Claude) | Bom desempenho em português e em seguir instruções restritas, o que ajuda no RNF-01. | Uso pago; menos material de apoio em português. |
-| Google (Gemini) | Possui camada gratuita com limites, útil para desenvolver sem custo. | Limites de requisição menores, o que pesa no RNF-04. |
+| **Provedor da API de IA** (E4: explicação e rascunho de abordagem) | **OpenAI.** SDK amplo e bem documentado, boa saída estruturada em JSON e chave já reservada para esse uso. O uso é pago, então será definido um teto de gasto. | Anthropic (Claude), pelo bom desempenho em português e em seguir instruções restritas; Google (Gemini), por ter camada gratuita, com limites de requisição menores. |
+| **Telas dos 30% do sistema** | **Fluxo mínimo ponta a ponta:** cadastro/login, perfil, busca de empresas e lista de oportunidades com ranking (RF-01, RF-02, RF-03 e RF-06). Mostra o valor do produto sem depender da IA e é a opção mais segura para o prazo. | Foco na IA (busca, detalhe com explicação e rascunho, RF-02, RF-07 e RF-08); foco na gestão (lista, status e exportação, RF-10 e RF-11). |
+| **Modo de testar os protótipos** (issue #11) | **Teste total, com possíveis clientes (freelancers),** precedido de um teste restrito da equipe para corrigir erros óbvios. A meta é ouvir de 3 a 5 freelancers antes da entrega. | Restrito (só a equipe), que tem visão enviesada; geral (qualquer pessoa), cujo retorno pode não refletir a necessidade de um freelancer. |
 
-Como a camada de IA fica atrás de uma interface própria (RNF-06), trocar de provedor depois tem custo baixo. A sugestão é começar por um e manter o outro como alternativa.
-
-**2. Quais telas formam os 30% do sistema** (a definição final sai junto com os protótipos, issue #10)
-
-| Opção | Telas | Cobre | Observação |
-|---|---|---|---|
-| **A. Fluxo mínimo ponta a ponta** (sugerida) | Cadastro/login, perfil, busca de empresas e lista de oportunidades com ranking | RF-01, RF-02, RF-03, RF-06 | Mostra o valor do produto sem depender da IA e é a opção mais segura para o prazo. |
-| B. Foco na IA | Busca, detalhe da oportunidade com explicação e rascunho de abordagem | RF-02, RF-07, RF-08 | Destaca a integração pedida pela professora, mas depende de a busca e as evidências funcionarem bem. |
-| C. Foco na gestão | Lista de oportunidades, status do contato e exportação | RF-10, RF-11 | Entrega mais fácil, mas com menos peso técnico para o TCC. |
-
-**3. Modo de testar a prototipação** (issue #11)
-
-| Opção | Quem testa | Vantagens | Pontos de atenção |
-|---|---|---|---|
-| Restrito | Só a equipe de desenvolvimento | Rápido e sem custo de organização. | Visão enviesada, pois quem fez conhece o fluxo. |
-| **Total** (sugerida) | Possíveis clientes, ou seja, freelancers | Feedback do público-alvo real. | Exige recrutar poucas pessoas e combinar horário. |
-| Geral | Qualquer pessoa | Fácil de conseguir participantes. | O retorno pode não refletir a necessidade de um freelancer. |
-
-A sugestão é começar com o teste restrito para corrigir erros óbvios e fazer o teste total com 3 a 5 freelancers antes da entrega.
+Como a camada de IA fica atrás de uma interface própria (RNF-06), trocar de provedor depois tem custo baixo. Se algum ponto não funcionar na prática, a decisão pode ser revista na Sprint 3 e registrada neste documento.
 
 ## 5. Tecnologias
 
@@ -107,7 +85,7 @@ A sugestão é começar com o teste restrito para corrigir erros óbvios e fazer
 | Backend | Python 3.12 + FastAPI | API REST simples de construir, documentação automática e bom ecossistema para IA e análise de HTML. |
 | Banco de dados | SQLite no desenvolvimento, com migrações (Alembic) e SQLAlchemy | Zero configuração para a equipe; permite migrar para PostgreSQL sem reescrever. |
 | Frontend | React + Vite | Atende à aplicação web responsiva (RNF-03) e é amplamente documentado. |
-| IA | API de um modelo de linguagem, acessada por uma camada própria | Isola o provedor para trocar sem afetar o sistema (RNF-04 e RNF-06). O provedor será escolhido na Sprint 3. |
+| IA | API da OpenAI, acessada por uma camada própria | Isola o provedor para trocar sem afetar o sistema (RNF-04 e RNF-06). O provedor escolhido é a OpenAI. |
 | Busca de empresas | **Geoapify** (Places, Geocoding e Place Details), acessada por uma camada própria | Permite guardar os resultados na carteira do usuário, o que não é possível com a API de lugares do Google por restrição de armazenamento. Os dados vêm do OpenStreetMap, com a atribuição exigida. |
 | Fonte alternativa | OpenStreetMap (Overpass) | Plano B quando não houver chave do Geoapify. É menos estável, então não é o caminho principal. |
 | Testes e qualidade | Pytest, Ruff e GitHub Actions | Testes automáticos e verificação de estilo a cada pull request. |
