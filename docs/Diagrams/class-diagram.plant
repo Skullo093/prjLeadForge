@@ -1,0 +1,117 @@
+@startuml Diagrama_de_Classes_LeadForge
+
+enum NivelCertezaEnum {
+    CONFIRMADO
+    SINAL_FORTE
+    INFERENCIA
+    DESCONHECIDO
+}
+
+enum StatusContatoEnum {
+    NOVO
+    CONTATADO
+    RESPONDEU
+    DESCARTADO
+}
+
+enum TipoEvidenciaEnum {
+    HTTPS
+    RESPONSIVIDADE_CELULAR
+    BOTAO_WHATSAPP
+    FORMULARIO_CONTATO
+    CHAMADA_PARA_ACAO
+}
+
+class PerfilFreelancer {
+    +int id
+    +String nome
+    +String email
+    +List<String> habilidades
+    +List<String> servicos
+    +String cidade
+    +String estado
+    +String tomComunicacao
+    +atualizarPerfil(dados): void
+}
+
+class Empresa {
+    +int id
+    +String nome
+    +String nicho
+    +String cidade
+    +String estado
+    +String urlSite
+    +String telefone
+    +String endereco
+    +DateTime dataCriacao
+    +possuiSite(): boolean
+}
+
+class Evidencia {
+    +int id
+    +int empresaId
+    +TipoEvidenciaEnum tipoEvidencia
+    +String valor
+    +NivelCertezaEnum nivelCerteza
+    +String origemFonte
+    +obterResumoTextual(): String
+}
+
+class Oportunidade {
+    +int id
+    +int perfilFreelancerId
+    +int empresaId
+    +float pontuacao
+    +StatusContatoEnum statusContato
+    +DateTime dataCriacao
+    +atualizarStatus(novoStatus): void
+    +calcularPontuacaoTotal(): float
+}
+
+class SugestaoAbordagem {
+    +int id
+    +int oportunidadeId
+    +String textoExplicacao
+    +String rascunhoMensagem
+    +boolean foiEditado
+    +editarMensagem(novoTexto): void
+}
+
+class MecanismoDescoberta {
+    +buscarEmpresas(nicho: String, cidade: String, uf: String): List<Empresa>
+    -removerDuplicadas(empresas: List<Empresa>): List<Empresa>
+}
+
+class AnalisadorSite {
+    +analisar(empresa: Empresa): List<Evidencia>
+}
+
+class AvaliadorOportunidade {
+    +avaliar(empresa: Empresa, evidencias: List<Evidencia>): Oportunidade
+}
+
+class AssistenteIA {
+    +explicarOportunidade(oportunidade: Oportunidade, evidencias: List<Evidencia>): String
+    +gerarRascunhoAbordagem(perfil: PerfilFreelancer, oportunidade: Oportunidade): SugestaoAbordagem
+}
+
+class ServicoExportacao {
+    +exportarParaCsv(oportunidades: List<Oportunidade>): byte[]
+    +exportarParaJson(oportunidades: List<Oportunidade>): String
+}
+
+PerfilFreelancer "1" -- "0..*" Oportunidade : possui na carteira >
+Empresa "1" -- "0..*" Evidencia : possui >
+Empresa "1" -- "0..*" Oportunidade : associada a >
+Oportunidade "1" -- "0..1" SugestaoAbordagem : gera >
+
+Evidencia ..> NivelCertezaEnum
+Evidencia ..> TipoEvidenciaEnum
+Oportunidade ..> StatusContatoEnum
+
+MecanismoDescoberta ..> Empresa : cria
+AnalisadorSite ..> Evidencia : produz
+AvaliadorOportunidade ..> Oportunidade : calcula
+AssistenteIA ..> SugestaoAbordagem : gera
+
+@enduml
