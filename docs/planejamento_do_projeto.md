@@ -20,7 +20,7 @@ Os 30% de protótipos implementados formam o **recorte do sistema** desta etapa 
 
 ## 2. Organização da equipe
 
-Seguimos o Scrum, como definido na escolha do modelo de software. Os três integrantes atuam como desenvolvedores; os outros dois papéis são distribuídos conforme a atuação de cada um até aqui.
+Seguimos o Scrum, como definido na escolha do modelo de software. Os três integrantes atuam como desenvolvedores; os outros dois papéis são distribuídos conforme a atuação de cada um até aqui. Esta distribuição é provisória e será confirmada na Sprint 3.
 
 | Papel | Responsável | Responsabilidade |
 |---|---|---|
@@ -32,54 +32,65 @@ Seguimos o Scrum, como definido na escolha do modelo de software. Os três integ
 
 | Evento | Frequência | Duração |
 |---|---|---|
-| Sprint | 2 semanas | — |
+| Sprint | 2 semanas (a Sprint 5 tem 1 semana) | — |
 | Sprint Planning | Início da sprint | até 1 h |
 | Daily Scrum | Combinada pela equipe (pode ser assíncrona no grupo de mensagens) | até 15 min |
-| Sprint Review | Fim da sprint | até 1 h |
+| Sprint Review | Data de fim da sprint (ver seção 4) | até 1 h |
 | Retrospectiva | Após a review | até 30 min |
 
 ## 3. Backlog do produto
 
 Agrupamos os requisitos em épicos e priorizamos pelo método MoSCoW (**M**ust, **S**hould, **C**ould).
 
-| Épico | Requisitos | Prioridade | Observação |
-|---|---|---|---|
-| E1. Conta e perfil | RF-01, RNF-02 | Must | Inclui cadastro e login, necessários para isolar a carteira de cada usuário (REG-09). |
-| E2. Descoberta de empresas | RF-02, RF-03, RNF-04 | Must | Integração com API de lugares, atrás de uma interface substituível. |
-| E3. Evidências e avaliação | RF-04, RF-05, RF-06 | Must | Núcleo do produto: o que é detectado e com qual certeza. |
-| E4. IA aplicada | RF-07, RF-08, RNF-01, RNF-05 | Must | A IA só sintetiza dados já coletados e nada é enviado sem revisão. |
-| E5. Gestão da carteira | RF-10, RF-11 | Should | Status do contato e exportação CSV/JSON. |
-| E6. Assistente de análise | RF-09 | Could | Consulta em linguagem natural; entra se houver tempo. |
-| E7. Transversais | RNF-03, RNF-06 | Must | Interface responsiva e código modular, aplicados em todas as sprints. |
+| Épico | Requisitos | Prioridade | Previsto em | Observação |
+|---|---|---|---|---|
+| E1. Conta e perfil | RF-01, RNF-02 | Must | Sprint 4 | Inclui cadastro e login, necessários para isolar a carteira de cada usuário (REG-09). |
+| E2. Descoberta de empresas | RF-02, RF-03, RNF-04 | Must | Sprint 4 | Integração com a API Geoapify, atrás de uma interface substituível. |
+| E3. Evidências e avaliação | RF-04, RF-05, RF-06 | Must | Sprint 4 (parcial) | Núcleo do produto: o que é detectado e com qual certeza. Entra o que couber nos 30%. |
+| E4. IA aplicada | RF-07, RF-08, RNF-01, RNF-05 | Must | Após os 30%, ou Sprint 5 se houver folga | A IA só sintetiza dados já coletados e nada é enviado sem revisão. |
+| E5. Gestão da carteira | RF-10, RF-11 | Should | Após os 30% | Status do contato e exportação CSV/JSON. |
+| E6. Assistente de análise | RF-09 | Could | Após os 30% | Consulta em linguagem natural; entra se houver tempo. |
+| E7. Transversais | RNF-03, RNF-06 | Must | Todas as sprints | Interface responsiva e código modular. |
+
+A **prioridade** diz o quanto o item importa para o produto; a coluna **Previsto em** diz quando ele entra, considerando que o sistema desta etapa cobre 30% dos protótipos. Quais telas formam esses 30% será definido na Sprint 3, junto com os protótipos (issue #10).
 
 ## 4. Plano de sprints
 
-As datas serão fixadas na primeira Sprint Planning, a partir do prazo oficial de cada entrega. A ordem abaixo é a sequência prevista.
+As datas abaixo são o **fim de cada sprint**, quando acontecem a Sprint Review e a Retrospectiva. Os milestones do GitHub (S1 a S5) correspondem às sprints.
 
-| Sprint | Foco | Resultado esperado |
-|---|---|---|
-| **1** | Fechar o **Documento** (etapas 7, 8 e 9) | Planejamento, diagrama de casos de uso e diagrama de classes aprovados. Fecha a Entrega 1. |
-| **2** | **Protótipos** (etapas 10 e 11) | Telas em média fidelidade das jornadas principais e plano de teste dos protótipos. Fecha a Entrega 2. |
-| **3** | **Sistema, base** (etapa 12) | Repositório estruturado, banco de dados, autenticação, perfil do freelancer (E1) e integração com a API de lugares (E2). |
-| **4** | **Sistema, evidências** (etapa 12) | Varredura de sites, níveis de certeza, pontuação e ranking (E3). |
-| **5** | **Sistema, IA** (etapa 12) | Explicação e rascunho de abordagem (E4), com as regras de integridade validadas. Fecha a Entrega 3. |
-| **Extra** | Gestão da carteira e assistente | E5 e, se houver tempo, E6, além de ajustes finais. |
+| Sprint | Fim | Foco | Issues | Resultado esperado |
+|---|---|---|---|---|
+| **1** | 09/10 | Definição e requisitos | #1 a #6 | Definição, tema e delimitação, requisitos de negócio, funcionais e não funcionais, e modelo de software. **Concluída.** |
+| **2** | 23/10 | Planejamento e modelagem | #7, #8 e #9 | Este planejamento, o diagrama de casos de uso e o diagrama de classes. |
+| **3** | 06/11 | Protótipos | #10 e #11 | Telas em média fidelidade, definição dos 30% a implementar e escolha do modo de testar a prototipação. |
+| **4** | 20/11 | Sistema | #12 | Implementação de 30% dos protótipos: base do projeto, perfil, descoberta de empresas e o que couber da avaliação de oportunidades. |
+| **5** | 27/11 | Entrega final | #13, #14 e #15 | Consolidação e entrega dos três artefatos: Documento, Protótipos e Sistema. Sprint de 1 semana. |
 
-A sequência prioriza primeiro o que gera risco (integrações externas e IA) e deixa os itens `Should` e `Could` para o fim.
+A Sprint 5 é curta e serve para revisar e consolidar, por isso nenhuma funcionalidade nova deve começar nela, a não ser que as anteriores terminem com folga.
 
-## 5. Tecnologias propostas
+### Decisões deixadas para a Sprint 3
+
+O que ainda não precisa ser decidido agora fica para a próxima sprint, e a decisão é registrada neste documento:
+
+- confirmação dos papéis de Product Owner e Scrum Master;
+- quais telas formam os 30% do sistema;
+- provedor da API de IA (a candidata inicial é a OpenAI);
+- modo de teste dos protótipos (issue #11).
+
+## 5. Tecnologias
 
 | Camada | Escolha | Motivo |
 |---|---|---|
 | Backend | Python 3.12 + FastAPI | API REST simples de construir, documentação automática e bom ecossistema para IA e análise de HTML. |
 | Banco de dados | SQLite no desenvolvimento, com migrações (Alembic) e SQLAlchemy | Zero configuração para a equipe; permite migrar para PostgreSQL sem reescrever. |
 | Frontend | React + Vite | Atende à aplicação web responsiva (RNF-03) e é amplamente documentado. |
-| IA | API de um modelo de linguagem, acessada por uma camada própria | Isola o provedor para trocar sem afetar o sistema (RNF-04 e RNF-06). |
-| Busca de empresas | API de lugares/mapas, acessada por uma camada própria | Mesmo motivo; permite substituir a fonte de dados. |
+| IA | API de um modelo de linguagem, acessada por uma camada própria | Isola o provedor para trocar sem afetar o sistema (RNF-04 e RNF-06). O provedor será escolhido na Sprint 3. |
+| Busca de empresas | **Geoapify** (Places, Geocoding e Place Details), acessada por uma camada própria | Permite guardar os resultados na carteira do usuário, o que não é possível com a API de lugares do Google por restrição de armazenamento. Os dados vêm do OpenStreetMap, com a atribuição exigida. |
+| Fonte alternativa | OpenStreetMap (Overpass) | Plano B quando não houver chave do Geoapify. É menos estável, então não é o caminho principal. |
 | Testes e qualidade | Pytest, Ruff e GitHub Actions | Testes automáticos e verificação de estilo a cada pull request. |
 | Gestão | GitHub (issues, milestones e pull requests) | Já é usado pela equipe. |
 
-> A stack é uma proposta e pode ser ajustada na primeira Sprint Planning, desde que a decisão seja registrada neste documento.
+> A stack foi aprovada pela equipe. Qualquer mudança futura deve ser registrada neste documento.
 
 ### Visão geral da arquitetura
 
@@ -88,7 +99,7 @@ Navegador (React)
       ↓  HTTP/JSON
 API FastAPI
   ├── Perfil e autenticação
-  ├── Descoberta de empresas ──→ provedor de lugares
+  ├── Descoberta de empresas ──→ Geoapify
   ├── Análise de evidências ───→ sites públicos
   ├── Avaliação e ranking
   ├── Camada de IA ────────────→ provedor de LLM

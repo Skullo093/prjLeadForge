@@ -62,7 +62,7 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 
 ## Como trabalhamos
 
-Usamos Scrum, com ciclos curtos e entregas incrementais. Os motivos da escolha estão em [`docs/Escolha do modelo de Software.md`](docs/Escolha%20do%20modelo%20de%20Software.md). A stack proposta e o plano de sprints estão em [`docs/planejamento_do_projeto.md`](docs/planejamento_do_projeto.md).
+Usamos Scrum, com ciclos curtos e entregas incrementais. Os motivos da escolha estão em [`docs/Escolha do modelo de Software.md`](docs/Escolha%20do%20modelo%20de%20Software.md). A stack e o plano de sprints estão em [`docs/planejamento_do_projeto.md`](docs/planejamento_do_projeto.md).
 
 ## Equipe
 
