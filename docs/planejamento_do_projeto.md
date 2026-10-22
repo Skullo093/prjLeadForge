@@ -20,7 +20,7 @@ Os 30% de protótipos implementados formam o **recorte do sistema** desta etapa 
 
 ## 2. Organização da equipe
 
-Seguimos o Scrum, como definido na escolha do modelo de software. Os três integrantes atuam como desenvolvedores; os outros dois papéis são distribuídos conforme a atuação de cada um até aqui. Esta distribuição é provisória e será confirmada na Sprint 3.
+Seguimos o Scrum, como definido na escolha do modelo de software. Os três integrantes atuam como desenvolvedores; os outros dois papéis são distribuídos conforme a atuação de cada um até aqui. Esta distribuição foi confirmada pela equipe.
 
 | Papel | Responsável | Responsabilidade |
 |---|---|---|
@@ -70,12 +70,35 @@ A Sprint 5 é curta e serve para revisar e consolidar, por isso nenhuma funciona
 
 ### Decisões deixadas para a Sprint 3
 
-O que ainda não precisa ser decidido agora fica para a próxima sprint, e a decisão é registrada neste documento:
+O que ainda não precisa ser decidido agora fica para a próxima sprint. Abaixo estão as opções que mais fazem sentido para cada ponto, com uma sugestão. A decisão final é da equipe e, depois de tomada, será registrada neste documento.
 
-- confirmação dos papéis de Product Owner e Scrum Master;
-- quais telas formam os 30% do sistema;
-- provedor da API de IA (a candidata inicial é a OpenAI);
-- modo de teste dos protótipos (issue #11).
+**1. Provedor da API de IA** (usado em E4: explicação e rascunho de abordagem)
+
+| Opção | Vantagens | Pontos de atenção |
+|---|---|---|
+| **OpenAI** (sugerida) | SDK amplo e bem documentado, boa saída estruturada em JSON, já havia chave reservada para esse uso. | Uso pago; é preciso definir um teto de gasto. |
+| Anthropic (Claude) | Bom desempenho em português e em seguir instruções restritas, o que ajuda no RNF-01. | Uso pago; menos material de apoio em português. |
+| Google (Gemini) | Possui camada gratuita com limites, útil para desenvolver sem custo. | Limites de requisição menores, o que pesa no RNF-04. |
+
+Como a camada de IA fica atrás de uma interface própria (RNF-06), trocar de provedor depois tem custo baixo. A sugestão é começar por um e manter o outro como alternativa.
+
+**2. Quais telas formam os 30% do sistema** (a definição final sai junto com os protótipos, issue #10)
+
+| Opção | Telas | Cobre | Observação |
+|---|---|---|---|
+| **A. Fluxo mínimo ponta a ponta** (sugerida) | Cadastro/login, perfil, busca de empresas e lista de oportunidades com ranking | RF-01, RF-02, RF-03, RF-06 | Mostra o valor do produto sem depender da IA e é a opção mais segura para o prazo. |
+| B. Foco na IA | Busca, detalhe da oportunidade com explicação e rascunho de abordagem | RF-02, RF-07, RF-08 | Destaca a integração pedida pela professora, mas depende de a busca e as evidências funcionarem bem. |
+| C. Foco na gestão | Lista de oportunidades, status do contato e exportação | RF-10, RF-11 | Entrega mais fácil, mas com menos peso técnico para o TCC. |
+
+**3. Modo de testar a prototipação** (issue #11)
+
+| Opção | Quem testa | Vantagens | Pontos de atenção |
+|---|---|---|---|
+| Restrito | Só a equipe de desenvolvimento | Rápido e sem custo de organização. | Visão enviesada, pois quem fez conhece o fluxo. |
+| **Total** (sugerida) | Possíveis clientes, ou seja, freelancers | Feedback do público-alvo real. | Exige recrutar poucas pessoas e combinar horário. |
+| Geral | Qualquer pessoa | Fácil de conseguir participantes. | O retorno pode não refletir a necessidade de um freelancer. |
+
+A sugestão é começar com o teste restrito para corrigir erros óbvios e fazer o teste total com 3 a 5 freelancers antes da entrega.
 
 ## 5. Tecnologias
 
