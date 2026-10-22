@@ -73,15 +73,7 @@ Para evitar conclusões falsas, cada achado recebe um nível de certeza:
 | `inferência` | Interpretação plausível a partir das evidências. |
 | `desconhecido` | Não há informação suficiente — ausência de evidência não é evidência de ausência. |
 
-## 1.5 Origem e evolução da ideia
-
-O LeadForge nasceu como um projeto pessoal em desenvolvimento no repositório [`murilloalvz/leadforge-ai`](https://github.com/murilloalvz/leadforge-ai), que validou a viabilidade técnica da descoberta de empresas e da análise de sites. Este Trabalho de Conclusão de Curso **reaproveita a ideia de produto**, mas é um **novo projeto**, reconstruído do zero, com:
-
-- processo de engenharia de software formal (levantamento de requisitos, modelagem UML, protótipos e implementação);
-- integração com IA como requisito do produto;
-- escopo definido e delimitado para o prazo do TCC (ver documento 2).
-
-## 1.6 Objetivos
+## 1.5 Objetivos
 
 **Objetivo geral:** desenvolver um sistema web que auxilie freelancers a identificar e priorizar empresas com potencial de contratação, apoiando a abordagem comercial com explicações geradas por IA a partir de evidências públicas.
 
@@ -94,6 +86,6 @@ O LeadForge nasceu como um projeto pessoal em desenvolvimento no repositório [`
 5. integrar um modelo de linguagem para explicar oportunidades e sugerir abordagens sem fabricar informações;
 6. avaliar o sistema com potenciais usuários (freelancers).
 
-## 1.7 Público-alvo
+## 1.6 Público-alvo
 
 Freelancers e pequenos prestadores de serviço digital, como desenvolvedores web, designers, profissionais de social media, SEO, copywriting, gestão de tráfego e automação, que precisam captar clientes por conta própria.

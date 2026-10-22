@@ -47,7 +47,7 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 4 | Requisitos funcionais ([doc](docs/requisitos_funcionais.md)) | 1 · Documento |
 | 5 | Requisitos não funcionais ([doc](docs/requisitos_n_o_funcionais.md)) | 1 · Documento |
 | 6 | Escolha do modelo de software ([doc](docs/Escolha%20do%20modelo%20de%20Software.md)) | 1 · Documento |
-| 7 | Planejamento do projeto de software | 1 · Documento |
+| 7 | Planejamento do projeto de software ([doc](docs/planejamento_do_projeto.md)) | 1 · Documento |
 | 8 | Diagramas de uso | 1 · Documento |
 | 9 | Diagramas de classe | 1 · Documento |
 | 10 | Protótipos das telas em média fidelidade | 2 · Protótipos |
@@ -62,7 +62,7 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 
 ## Como trabalhamos
 
-Usamos Scrum, com ciclos curtos e entregas incrementais. Os motivos da escolha estão em [`docs/Escolha do modelo de Software.md`](docs/Escolha%20do%20modelo%20de%20Software.md). A stack será definida no planejamento (etapa 7).
+Usamos Scrum, com ciclos curtos e entregas incrementais. Os motivos da escolha estão em [`docs/Escolha do modelo de Software.md`](docs/Escolha%20do%20modelo%20de%20Software.md). A stack e o plano de sprints estão em [`docs/planejamento_do_projeto.md`](docs/planejamento_do_projeto.md).
 
 ## Equipe
 
