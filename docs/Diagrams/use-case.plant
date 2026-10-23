@@ -1,0 +1,78 @@
+@startuml Diagrama_Casos_de_Uso_LeadForge
+
+' Configurações visuais do diagrama
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam actorStyle stickman
+
+' Atores Principais e Secundários
+actor "Freelancer" as freelancer
+actor "API de Lugares/Mapas\n(Geoapify)" as api_mapas << System >>
+actor "OpenAI /\nProvedor de IA" as api_ia << System >>
+actor "Sites de Clientes\n(Públicos)" as sites_clientes << System >>
+
+rectangle "LeadForge\n(Sistema)" {
+
+    ' Casos de Uso
+    usecase "Manter Perfil do\nFreelancer\n(RF-01)" as UC_RF01
+    usecase "Pesquisar Empresas\nExternas\n(RF-02)" as UC_RF02
+    usecase "Deduplicação de\nOportunidades\n(RF-03)" as UC_RF03
+    
+    usecase "Gerir Oportunidades &\nCarteira" as UC_Gerir
+    usecase "Varrer Evidências do Site\n(RF-04)" as UC_RF04
+    usecase "Classificar por Nível de\nCerteza\n(RF-05)" as UC_RF05
+    usecase "Calcular Pontuação e\nRanqueamento\n(RF-06)" as UC_RF06
+    usecase "Visualizar Explicação da\nOportunidade por IA\n(RF-07)" as UC_RF07
+    usecase "Gerar Abordagem\nComercial por IA\n(RF-08)" as UC_RF08
+    
+    usecase "Consultar Carteira com\nAssistente de IA\n(RF-09)" as UC_RF09
+    usecase "Gerenciar Status do\nContato\n(RF-10)" as UC_RF10
+    
+    usecase "Exportar Dados\n(RF-11)" as UC_RF11
+    usecase "Exportar para CSV" as UC_CSV
+    usecase "Exportar para JSON" as UC_JSON
+
+    ' Notas de Requisitos Não Funcionais
+    note "«RNF-02»\n(Isolamento por Usuário / LGPD)" as N_RNF02
+    note "«RNF-01»\nIntegridade de Dados /\nSem Alucinações" as N_RNF01
+    note "«RNF-05»\nRevisão Humana Obrigatória,\nsem envio automático" as N_RNF05
+
+}
+
+' Relacionamentos do Ator Principal (Freelancer)
+freelancer --> UC_RF01
+freelancer --> UC_RF02
+freelancer --> UC_Gerir
+freelancer --> UC_RF09
+freelancer --> UC_RF10
+freelancer --> UC_RF11
+
+' Relacionamentos do Caso de Uso "Pesquisar Empresas"
+UC_RF02 .> UC_RF03 : <<include>>
+UC_RF02 <-- api_mapas
+
+' Relacionamentos de Inclusão da Gestão de Oportunidades
+UC_Gerir .> UC_RF04 : <<include>>
+UC_Gerir .> UC_RF05 : <<include>>
+UC_Gerir .> UC_RF06 : <<include>>
+UC_Gerir .> UC_RF07 : <<include>>
+UC_Gerir .> UC_RF08 : <<include>>
+
+' Relacionamentos do Caso de Uso "Exportar Dados"
+UC_CSV .> UC_RF11 : <<extend>>
+UC_JSON .> UC_RF11 : <<extend>>
+
+' Relacionamentos com Atores Secundários (Sistemas Externos)
+UC_RF04 <-- sites_clientes
+UC_RF07 <-- api_ia
+UC_RF08 <-- api_ia
+UC_RF08 <-- sites_clientes
+UC_RF09 <-- api_ia
+UC_RF09 <-- sites_clientes
+
+' Conexões das Notas com os Casos de Uso
+N_RNF01 .. UC_RF07
+N_RNF05 .. UC_RF08
+
+@enduml
