@@ -48,11 +48,12 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 5 | Requisitos não funcionais ([doc](docs/requisitos_n_o_funcionais.md)) | 1 · Documento |
 | 6 | Escolha do modelo de software ([doc](docs/Escolha%20do%20modelo%20de%20Software.md)) | 1 · Documento |
 | 7 | Planejamento do projeto de software ([doc](docs/planejamento_do_projeto.md)) | 1 · Documento |
-| 8 | Diagramas de uso | 1 · Documento |
-| 9 | Diagramas de classe | 1 · Documento |
+| 8 | Diagramas de uso ([doc](docs/Diagrams/docs/Diagrams/use-case)) | 1 · Documento |
+| 9 | Diagramas de classe ([doc](docs/Diagrams/docs/Diagrams/class-diagram)) | 1 · Documento |
 | 10 | Protótipos das telas em média fidelidade | 2 · Protótipos |
 | 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso | 2 · Protótipos |
 | 12 | Desenvolvimento de 30% dos protótipos em sistema | 3 · Sistema |
+
 
 ## Entregas
 
