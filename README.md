@@ -2,7 +2,7 @@
 
 Sistema web que ajuda freelancers a encontrar clientes. Você diz o que sabe fazer, e o LeadForge procura empresas que provavelmente precisam do seu serviço, mostra as evidências por trás de cada conclusão e ajuda a escrever a primeira mensagem.
 
-> Projeto em fase inicial. Por enquanto estamos na parte de documentação e planejamento, ainda não há código.
+> Projeto em desenvolvimento. A documentação e o planejamento estão prontos, e o primeiro recorte do sistema (30% dos protótipos) já funciona.
 
 ## Por que o LeadForge
 
@@ -52,7 +52,7 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 9 | Diagramas de classe ([doc](docs/Diagrams/docs/Diagrams/class-diagram)) | 1 · Documento |
 | 10 | Protótipos das telas em média fidelidade | 2 · Protótipos |
 | 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso | 2 · Protótipos |
-| 12 | Desenvolvimento de 30% dos protótipos em sistema | 3 · Sistema |
+| 12 | Desenvolvimento de 30% dos protótipos em sistema ([doc](docs/sistema-30-porcento.md)) | 3 · Sistema |
 
 
 ## Entregas
@@ -60,6 +60,26 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 1. **Documento:** definição, requisitos, modelo de desenvolvimento, planejamento e diagramas (etapas 1 a 9).
 2. **Protótipos:** telas em média fidelidade e a forma de testá-las (etapas 10 e 11).
 3. **Sistema:** implementação de 30% dos protótipos (etapa 12).
+
+## Executando o sistema
+
+O sistema tem um backend em Python (FastAPI) e um frontend em React. O modo `demo` funciona sem chaves de API nem internet.
+
+```bash
+# backend (http://localhost:8000)
+cd backend
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+alembic upgrade head
+uvicorn app.main:app --reload
+
+# frontend (http://localhost:5173), em outro terminal
+cd frontend
+npm install
+npm run dev
+```
+
+Testes: `pytest` na pasta `backend` e `npm test` na pasta `frontend`. Os detalhes (modos de operação, API, regras de pontuação e limitações) estão em [`docs/sistema-30-porcento.md`](docs/sistema-30-porcento.md).
 
 ## Como trabalhamos
 
