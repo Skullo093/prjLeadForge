@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Banco local e segredos
+*.db
+.env
+!.env.example
+
+# Node
+node_modules/
+dist/
+*.local
+
+# Editor / sistema
+.DS_Store
+.vscode/
+.idea/
