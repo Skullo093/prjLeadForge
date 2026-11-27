@@ -164,3 +164,5 @@ O CI do repositório (`.github/workflows/ci.yml`) executa essas verificações a
 ## 9. Próximos passos
 
 Os itens abaixo ficam para depois dos 30%, na ordem de prioridade do planejamento: gestão de status do contato e exportação (RF-10 e RF-11), explicação e rascunho de abordagem por IA (RF-07, RF-08, RNF-01 e RNF-05) e assistente de análise da carteira (RF-09).
+
+Há também uma evolução maior, o **lado das empresas** (diagnóstico do próprio site e vitrine de freelancers), descrita em [`evolucao-lado-empresas.md`](evolucao-lado-empresas.md).

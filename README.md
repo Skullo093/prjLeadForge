@@ -61,6 +61,10 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 2. **Protótipos:** telas em média fidelidade e a forma de testá-las (etapas 10 e 11).
 3. **Sistema:** implementação de 30% dos protótipos (etapa 12).
 
+## Evolução prevista
+
+Hoje o freelancer procura empresas que precisam do seu serviço. A evolução proposta faz o caminho contrário: a **empresa** informa o próprio site, descobre o que precisa melhorar e recebe uma **vitrine de freelancers** para resolver cada ponto. Os requisitos, as telas e os marcos estão em [`docs/evolucao-lado-empresas.md`](docs/evolucao-lado-empresas.md).
+
 ## Executando o sistema
 
 O sistema tem um backend em Python (FastAPI) e um frontend em React. O modo `demo` funciona sem chaves de API nem internet.
@@ -87,7 +91,7 @@ copy .env.example .env
 
 alembic upgrade head
 
-uvicorn app.main:app –reload
+uvicorn app.main:app --reload
 
 • Após isso, o backend está pronto. Agora para ativar o front end, abra outro PowerShell da mesma forma que foi feita anteriormente e exexute os seguintes comandos:
 
