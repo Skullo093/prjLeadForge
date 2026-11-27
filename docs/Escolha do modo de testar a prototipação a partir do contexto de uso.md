@@ -1,13 +1,4 @@
-# Estratégia de Validação da Prototipação — LeadForge
-
-**Projeto / TG:** LeadForge: copiloto comercial para freelancers com prospecção assistida por inteligência artificial  
-**Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas — FATEC Sorocaba  
-**Equipe:** Allan Batista (Líder), Murillo Lourenço e Bruno Rocha  
-**Repositório:** [github.com/Skullo093/prjLeadForge](https://github.com/Skullo093/prjLeadForge)
-
----
-
-## 11. Escolha do Modo de Testar a Prototipação através da Contextualidade
+## Escolha do Modo de Testar a Prototipação através da Contextualidade
 
 Para a validação dos protótipos de média fidelidade do **LeadForge**, optamos pela estratégia de **teste total**, dividida em duas etapas:
 
