@@ -51,7 +51,7 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 8 | Diagramas de uso ([doc](docs/Diagrams/docs/Diagrams/use-case)) | 1 · Documento |
 | 9 | Diagramas de classe ([doc](docs/Diagrams/docs/Diagrams/class-diagram)) | 1 · Documento |
 | 10 | Protótipos das telas em média fidelidade ([link]()) | 2 · Protótipos |
-| 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso ([doc]()) | 2 · Protótipos |
+| 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso ([doc](docs/Escolha-do-modo-de-testar-a-prototipação-a-partir-do-contexto-de-uso.md)) | 2 · Protótipos |
 | 12 | Desenvolvimento de 30% dos protótipos em sistema ([doc](docs/sistema-30-porcento.md)) | 3 · Sistema |
 
 
