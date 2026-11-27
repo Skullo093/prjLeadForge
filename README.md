@@ -50,8 +50,8 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 | 7 | Planejamento do projeto de software ([doc](docs/planejamento_do_projeto.md)) | 1 · Documento |
 | 8 | Diagramas de uso ([doc](docs/Diagrams/docs/Diagrams/use-case)) | 1 · Documento |
 | 9 | Diagramas de classe ([doc](docs/Diagrams/docs/Diagrams/class-diagram)) | 1 · Documento |
-| 10 | Protótipos das telas em média fidelidade | 2 · Protótipos |
-| 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso | 2 · Protótipos |
+| 10 | Protótipos das telas em média fidelidade ([link]()) | 2 · Protótipos |
+| 11 | Escolha do modo de testar a prototipação, a partir do contexto de uso ([doc]()) | 2 · Protótipos |
 | 12 | Desenvolvimento de 30% dos protótipos em sistema ([doc](docs/sistema-30-porcento.md)) | 3 · Sistema |
 
 
@@ -65,19 +65,42 @@ Cada etapa tem uma issue neste repositório, e o que já foi escrito fica na pas
 
 O sistema tem um backend em Python (FastAPI) e um frontend em React. O modo `demo` funciona sem chaves de API nem internet.
 
-```bash
-# backend (http://localhost:8000)
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-alembic upgrade head
-uvicorn app.main:app --reload
+• Será necessário clonar o repositório, crie uma pasta no seu dispositivo
 
-# frontend (http://localhost:5173), em outro terminal
+• Pressione o botão Code, em seguida pressione a opção “Download ZIP”, e selecione a pasta criada
+
+• Após baixar, extraia os arquivos
+
+• Entre na pasta do repositório, vá até a barra de endereço e digite PowerShell
+
+• Execute os seguintes comandos: 
+
+cd backend
+
+python -m venv .venv
+
+.venv\Scripts\activate
+
+pip install -e ".[dev]"
+
+copy .env.example .env
+
+alembic upgrade head
+
+uvicorn app.main:app –reload
+
+• Após isso, o backend está pronto. Agora para ativar o front end, abra outro PowerShell da mesma forma que foi feita anteriormente e exexute os seguintes comandos:
+
 cd frontend
+
 npm install
+
 npm run dev
-```
+
+• Agora, no terminal do front end deve aparecer algo parecido com http://localhost:5173. Selecione este link e pressione o botão direito do mouse para copia-lo.
+
+• Cole o link do navegador e o Sistema deverá funcionar
+
 
 Testes: `pytest` na pasta `backend` e `npm test` na pasta `frontend`. Os detalhes (modos de operação, API, regras de pontuação e limitações) estão em [`docs/sistema-30-porcento.md`](docs/sistema-30-porcento.md).
 
